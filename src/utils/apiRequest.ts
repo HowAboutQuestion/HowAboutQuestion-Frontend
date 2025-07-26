@@ -2,7 +2,7 @@
  * @file apiRequest.ts
  * @summary Axios 인스턴스를 기반으로 한 API 요청 유틸 입니다.
  * @author cod0216
- * @create 2025-07-26
+ * @create 2025.07.26
  * @note
  * - 2025.07.26: 최초 생성 (cod0216)
  */

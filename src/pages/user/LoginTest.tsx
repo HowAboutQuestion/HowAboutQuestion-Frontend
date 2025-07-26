@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import type { ResponseDTO } from "@/utils/apiTypes";
 import type { LoginResponseData } from "@/pages/user/types";
 import { login } from "@/pages/user/userService";

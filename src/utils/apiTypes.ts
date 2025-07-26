@@ -2,7 +2,7 @@
  * @file apiTypes.ts
  * @summary 서버에서 공통적으로 사용하는 apiRequest 관련 타입입니다.
  * @author cod0216
- * @create 2025-07-26
+ * @create 2025.07.26
  * @note
  * - 2025.07.26: 최초 생성 (cod0216)
  */

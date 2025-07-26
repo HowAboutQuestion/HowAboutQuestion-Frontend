@@ -2,10 +2,11 @@
  * @file apiClient.ts
  * @summary API 요청의 기본 설정과 인터셉터를 설정합니다.
  * @author cod0216
- * @create 2025-07-26
+ * @create 2025.07.26
  * @note
  * - 2025.07.26: 최초 생성 (cod0216)
  */
+
 import axios from 'axios';
 
 /**
