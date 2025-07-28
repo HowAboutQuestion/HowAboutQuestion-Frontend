@@ -17,6 +17,6 @@ export interface ResponseDTO<T> {
     httpCode: number;
     httpStatus: string;
     serverCode : string;
-    message : string;
+    message? : string|null;
     data?: T|null;
 }
