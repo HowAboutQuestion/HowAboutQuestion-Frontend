@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import '@/styles/common.scss';
 import LoginTest from '@/pages/user/LoginTest'
 
