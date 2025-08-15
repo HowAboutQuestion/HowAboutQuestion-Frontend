@@ -1,0 +1,62 @@
+.button {
+  border-radius: $radius-2;
+  font-weight: $font-medium;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border-radius: $radius-2;
+  font-weight: $font-semibold;
+}
+
+
+.btn-primary {
+  background-color: $blue-5;
+  color: $white;
+
+  &:hover:not(:disabled) {
+    background-color: $blue-6;
+  }
+}
+
+.btn-secondary {
+  background-color: $blue-1;
+  color: $blue-6;
+
+  &:hover:not(:disabled) {
+    background-color: $blue-2;
+  }
+}
+
+.btn-danger {
+  background-color: $red-6;
+  color: $white;
+
+  &:hover:not(:disabled) {
+    background-color: $red-5;
+  }
+}
+
+.btn-small {
+  font-size: $font-sm;
+  padding: 6px 12px;
+}
+
+.btn-medium {
+  font-size: $font-md;
+  padding: 8px 16px;
+}
+
+.btn-large {
+  font-size: $font-lg;
+  padding: 12px 24px;
+}
