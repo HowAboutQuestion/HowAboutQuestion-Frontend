@@ -1,3 +1,12 @@
+$button-primary-color : $blue-5;
+$button-primary-hover-color : $blue-6;
+
+$button-secondary-color : $blue-1;
+$button-secondary-hover-color : $blue-1;
+
+$button-danger-color : $red-6;
+$button-danger-hover-color : $blue-5;
+
 .button {
   border-radius: $radius-2;
   font-weight: $font-medium;
@@ -20,29 +29,29 @@
 
 
 .btn-primary {
-  background-color: $blue-5;
+  background-color: $button-primary-color;
   color: $white;
 
   &:hover:not(:disabled) {
-    background-color: $blue-6;
+    background-color: $button-primary-hover-color;
   }
 }
 
 .btn-secondary {
-  background-color: $blue-1;
-  color: $blue-6;
+  background-color: $button-secondary-color;
+  color: $button-primary-color;
 
   &:hover:not(:disabled) {
-    background-color: $blue-2;
+    background-color: $button-secondary-hover-color;
   }
 }
 
 .btn-danger {
-  background-color: $red-6;
+  background-color: $button-danger-color;
   color: $white;
 
   &:hover:not(:disabled) {
-    background-color: $red-5;
+    background-color: $button-danger-hover-color;
   }
 }
 
