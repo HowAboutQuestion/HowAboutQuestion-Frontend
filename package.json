@@ -16,10 +16,9 @@
     "axios": "^1.10.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "node-sass": "^9.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.3"
+    "react-router-dom": "^7.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -41,6 +40,7 @@
     "jest-environment-jsdom": "^30.0.4",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
+    "sass-embedded": "1.90.0",
     "ts-jest": "^29.4.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",

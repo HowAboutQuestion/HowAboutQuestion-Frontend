@@ -1,0 +1,76 @@
+
+.navbar {
+  width: 100%;
+  background-color: $bg-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 60px;
+  border-bottom: 1px solid $gray-1;
+
+  .logoBox {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .logoImage {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+  }
+
+  .logoTitle {
+    font-size: $font-xl;
+    font-weight: $font-bold;
+    color: $black;
+  }
+  .navLinks {
+    display: flex;
+    gap: 24px;
+    font-size: $font-md;
+    font-weight: $font-medium;
+    color: $black;
+
+    div {
+      cursor: pointer;
+      transition: font-weight 0.2s ease;
+
+      &:hover {
+        font-weight: $font-bold;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 16px;
+
+    div, button {
+      font-size: $font-md;
+      font-weight: $font-medium;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .login {
+      color: $white;
+      background-color: $blue-6;
+
+      &:hover {
+        background-color: $blue-5;
+      }
+    }
+
+    .download {
+      color: $blue-6;
+      background-color: $blue-1;
+
+      &:hover {
+        background-color: $blue-2;
+      }
+    }
+  }
+}

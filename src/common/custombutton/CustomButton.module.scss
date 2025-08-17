@@ -1,0 +1,71 @@
+$button-primary-color : $blue-5;
+$button-primary-hover-color : $blue-6;
+
+$button-secondary-color : $blue-1;
+$button-secondary-hover-color : $blue-1;
+
+$button-danger-color : $red-6;
+$button-danger-hover-color : $blue-5;
+
+.button {
+  border-radius: $radius-2;
+  font-weight: $font-medium;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border-radius: $radius-2;
+  font-weight: $font-semibold;
+}
+
+
+.btn-primary {
+  background-color: $button-primary-color;
+  color: $white;
+
+  &:hover:not(:disabled) {
+    background-color: $button-primary-hover-color;
+  }
+}
+
+.btn-secondary {
+  background-color: $button-secondary-color;
+  color: $button-primary-color;
+
+  &:hover:not(:disabled) {
+    background-color: $button-secondary-hover-color;
+  }
+}
+
+.btn-danger {
+  background-color: $button-danger-color;
+  color: $white;
+
+  &:hover:not(:disabled) {
+    background-color: $button-danger-hover-color;
+  }
+}
+
+.btn-small {
+  font-size: $font-sm;
+  padding: 6px 12px;
+}
+
+.btn-medium {
+  font-size: $font-md;
+  padding: 8px 16px;
+}
+
+.btn-large {
+  font-size: $font-lg;
+  padding: 12px 24px;
+}
