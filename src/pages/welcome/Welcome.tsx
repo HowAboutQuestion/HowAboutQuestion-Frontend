@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Navbar from '@/common/navbar/Navbar';
+import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/welcome/Welcome.module.scss';
-import CustomButton from '@/common/custombutton/CustomButton';
+import CustomButton from '@/shared/custombutton/CustomButton';
 
 const Welcome: React.FC = () => {
   const sectionRefs = {

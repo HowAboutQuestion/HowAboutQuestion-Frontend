@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomButton from '@/common/custombutton/CustomButton';
+import CustomButton from '@/shared/custombutton/CustomButton';
 import styles from '@/common/navbar/Navbar.module.scss';
 
 const Navbar: React.FC = () => {

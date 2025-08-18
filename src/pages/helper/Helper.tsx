@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Navbar from '@/common/navbar/Navbar';
+import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/helper/Helper.module.scss';
 
 const Helper: React.FC = () => {
