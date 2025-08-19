@@ -1,5 +1,14 @@
+/**
+ * @internal
+ * @file Navbar.tsx
+ * @summary 공용 상단 네비게이션 컴포넌트입니다.
+ * @author khaelilm1311
+ * @create 2025.08.18
+ * @note
+ * - 2025.08.18: 최초 생성 (khaelilm1311)
+ */
 import React from 'react';
-import CustomButton from '@/common/custombutton/CustomButton';
+import CustomButton from '@/shared/custombutton/CustomButton';
 import styles from '@/common/navbar/Navbar.module.scss';
 
 const Navbar: React.FC = () => {

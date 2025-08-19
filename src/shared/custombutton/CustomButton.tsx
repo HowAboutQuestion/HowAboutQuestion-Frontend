@@ -1,3 +1,12 @@
+/**
+ * @internal
+ * @file CustomButton.tsx
+ * @summary 공용 버튼 컴포넌트입니다. 버튼 크기, 종류에 따라 일관된 디자인을 제공합니다.
+ * @author khaelilm1311
+ * @create 2025.08.18
+ * @note
+ * - 2025.08.18: 최초 생성 (khaelilm1311)
+ */
 import React from 'react';
 import styles from './CustomButton.module.scss';
 

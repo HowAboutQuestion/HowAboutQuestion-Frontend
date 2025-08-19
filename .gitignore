@@ -54,3 +54,6 @@ Icon?
 *.temp
 *.bak
 *.old
+
+*.module.scss.d.ts
+

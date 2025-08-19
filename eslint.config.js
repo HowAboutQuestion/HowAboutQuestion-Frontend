@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
 import eslintConfigPrettier from "eslint-config-prettier";
 import prettier from "eslint-plugin-prettier"; 
+import jsdocPlugin from "eslint-plugin-jsdoc"; 
 
 export default tseslint.config([
   globalIgnores(['dist']),
@@ -22,17 +23,35 @@ export default tseslint.config([
       globals: globals.browser,
     },
     plugins: {
-      prettier
+      prettier,    
+      jsdoc: jsdocPlugin
     },
-    settings: {
-      react: {
-        version: 'detect',
+      settings: {
+        react: {
+          version: 'detect',
+        },
+        jsdoc : {
+          ignoreInternal: true, 
+        }
       },
-    },
-    rules: {
-      "prettier/prettier": "error",
-      "prefer-arrow-callback": ["error"],
-    }
+      rules: {
+        "prettier/prettier": "error",
+        "prefer-arrow-callback": ["error"],
+        "jsdoc/require-jsdoc": ["warn", {
+          contexts: [
+            "FunctionDeclaration",
+            "ClassDeclaration",
+            "MethodDefinition",
+            "ArrowFunctionExpression"
+          ],
+          require: {
+            FunctionDeclaration: true,
+            ClassDeclaration: true,
+            MethodDefinition: true,
+            ArrowFunctionExpression: true,
+          }
+        }],
+      }
   },
   eslintConfigPrettier
 ])
