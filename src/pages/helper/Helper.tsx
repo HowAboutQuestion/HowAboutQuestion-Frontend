@@ -1,3 +1,12 @@
+/**
+ * @internal
+ * @file Helper.tsx
+ * @summary 도움말 페이지에 대한 컴포넌트입니다. <br> 초기 진입 시 애니메이션이 실행됩니다. <br> 플로팅 네비게이션 바로 스크롤을 이동할 수 있습니다.
+ * @author khaelilm1311
+ * @create 2025.08.18
+ * @note
+ * 2025.08.18: 최초 생성 (khaelilm1311)
+ */
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/helper/Helper.module.scss';

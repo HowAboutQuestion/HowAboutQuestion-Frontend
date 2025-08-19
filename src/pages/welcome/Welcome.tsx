@@ -1,3 +1,12 @@
+/**
+ * @internal
+ * @file Welcome.tsx
+ * @summary 웰컴 페이지(메인 페이지)에 대한 컴포넌트입니다. <br> 초기 진입 시 애니메이션이 실행됩니다.
+ * @author khaelilm1311
+ * @create 2025.08.18
+ * @note
+ * - 2025.08.18: 최초 생성 (khaelilm1311)
+ */
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/welcome/Welcome.module.scss';
