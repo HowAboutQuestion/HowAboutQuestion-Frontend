@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import CustomButton from '@/shared/custombutton/CustomButton';
-import styles from '@/common/navbar/Navbar.module.scss';
+import styles from '@/shared/navbar/Navbar.module.scss';
 
 const Navbar: React.FC = () => {
   return (
