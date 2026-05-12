@@ -1,0 +1,119 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mainContainer {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;  
+    box-sizing: border-box;
+    gap: 80px;
+  }
+  
+  section {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+    margin: 1rem;
+    border-radius: $radius-3;
+    min-height: 200px;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    gap: 40px;
+    min-height: 400px;
+  
+    .heroText {
+      max-width: 50%;
+      h1 {
+        font-size: $font-2xl;
+        margin-bottom: 16px;
+      }
+      h2 {
+        font-size: $font-4xl;
+        margin-bottom: 24px;
+      }
+      .heroButtons {
+        display: flex;
+        gap: 16px;
+      }
+    }
+  
+    .heroImage {
+      max-width: 40%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  
+  .learningAnalytics {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    .learningBox, .analyticsBox {
+      flex: 1;
+      padding: 24px;
+      border-radius: $radius-3;
+      background-color: $green-1;
+    }
+  }
+  
+  .community {
+    padding: 1rem;
+    background-color: $blue-1;
+  }
+  
+  .features {
+    padding: 1rem;
+    background-color: $yellow-2;
+  }
+  
+  .popular {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .animate-stagger {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+    > * {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+  
+    > *:nth-child(1) { animation-delay: 0.1s; }
+    > *:nth-child(2) { animation-delay: 0.3s; }
+    > *:nth-child(3) { animation-delay: 0.5s; }
+    > *:nth-child(4) { animation-delay: 0.7s; }
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      .heroText, .heroImage {
+        max-width: 100%;
+      }
+    }
+  }
+  

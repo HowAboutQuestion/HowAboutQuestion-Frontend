@@ -6,6 +6,7 @@
  * @create 2025.08.18
  * @note
  * - 2025.08.18: 최초 생성 (khaelilm1311)
+ * - 2026.05.12: 로그인 버튼 주석 (eunchang)
  */
 import React from 'react';
 import CustomButton from '@/shared/custombutton/CustomButton';
@@ -25,8 +26,8 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={styles.actions}>
-        <CustomButton text="로그인" variant="primary" size="medium" />
-        <CustomButton text="다운로드" variant="secondary" size="medium" />
+        {/* <CustomButton text="로그인" variant="primary" size="medium" /> */}
+        <CustomButton text="다운로드" variant="primary" size="medium" />
       </div>
     </div>
   );
