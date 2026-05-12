@@ -1,11 +1,18 @@
 import { Routes, Route } from 'react-router';
-import Welcome from '@/pages/welcome/Welcome';
+import Landing from '@/pages/landing/Landing';
+import Footer from '@/shared/footer/Footer';
 
+/**
+ *
+ */
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Welcome />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
