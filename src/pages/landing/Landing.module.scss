@@ -28,13 +28,15 @@
       margin-bottom: 16px;
     }
     h2 {
-      font-size: $font-4xl;
+      font-size: $font-5xl;
       margin-bottom: 24px;
     }
     .heroButtons {
       display: flex;
       gap: 16px;
       > * {
+        font-size: $font-2xl;
+        padding: 12px 24px;
         transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
@@ -66,7 +68,7 @@
   background-color: #dec09a;
   border-radius: $radius-5;
   padding: 56px 56px 80px;
-  min-height: 860px;
+  min-height: 650px;
 }
 
 .featuresTitle {
@@ -92,7 +94,7 @@
   border-radius: 0;
   font-size: $font-md;
   font-weight: $font-semibold;
-  color: $gray-5;
+  color: #8A6F50;
   cursor: pointer;
   position: relative;
   transition: color 0.2s ease;
@@ -123,67 +125,63 @@
 }
 
 .featureDetailCard {
-  margin-top: 28px;
+  margin-top: 32px;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  align-items: stretch;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .featureDetailContent {
-  border-radius: $radius-5;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.featureDetailLabel {
-  font-size: $font-sm;
-  font-weight: $font-bold;
-  color: $gray-5;
-  margin-bottom: 12px;
+  gap: 16px;
 }
 
 .featureDetailTitle {
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.2;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.35;
   font-weight: $font-bold;
   color: $black;
 }
 
 .featureDetailDescription {
-  margin-top: 16px;
   font-size: $font-md;
   line-height: 1.7;
-  color: $gray-6;
+  color: $black;
 }
 
 .featureDetailList {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 
   li {
     position: relative;
-    padding-left: 18px;
-    font-size: $font-md;
+    padding-left: 16px;
+    font-size: $font-sm;
     font-weight: $font-medium;
     color: $black;
 
     &::before {
       content: '';
       position: absolute;
-      top: 9px;
+      top: 8px;
       left: 0;
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: $radius-full;
-      background-color: $blue-5;
+      background-color: #8E6FD9;
     }
   }
+}
+
+.featureDetailImage {
+  width: 100%;
+  border-radius: $radius-3;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
 }
 
 .featuresPreview {

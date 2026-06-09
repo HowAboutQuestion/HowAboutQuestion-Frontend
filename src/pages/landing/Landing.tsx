@@ -96,7 +96,6 @@ const Landing: React.FC = () => {
                   )
                 }
               />
-              <CustomButton text="도움말" variant="secondary" size="medium" />
             </div>
           </div>
           <div className={styles.heroImage}>

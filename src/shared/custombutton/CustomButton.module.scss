@@ -69,3 +69,14 @@ $button-danger-hover-color : $blue-5;
   font-size: $font-lg;
   padding: 12px 24px;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}

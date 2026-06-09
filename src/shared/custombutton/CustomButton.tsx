@@ -18,14 +18,19 @@ interface CustomButtonProps {
   size?: ButtonSize;
   variant?: ButtonVariant;
   disabled?: boolean;
+  icon?: React.ReactNode;
   onClick?: () => void;
 }
 
+/**
+ *
+ */
 const CustomButton: React.FC<CustomButtonProps> = ({
   text,
   size = 'medium',
   variant = 'primary',
   disabled = false,
+  icon,
   onClick,
 }) => {
   const variantClass = styles[`btn-${variant}`];
@@ -38,7 +43,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       disabled={disabled}
       onClick={disabled ? undefined : onClick}
     >
-      {text}
+      <span className={styles.content}>
+        {icon && <span className={styles.icon}>{icon}</span>}
+        {text}
+      </span>
     </button>
   );
 };
