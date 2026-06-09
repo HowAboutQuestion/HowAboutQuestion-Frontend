@@ -56,4 +56,5 @@ Icon?
 *.old
 
 *.module.scss.d.ts
+*.module.d.scss.ts
 

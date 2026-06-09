@@ -1,26 +1,28 @@
-/**
- * @internal
- * @file landing.tsx
- * @summary 랜딩 페이지(레거시 다운로드)에 대한 컴포넌트입니다.
- * @author eunchang
- * @create 2026.05.12
- * @note
- * - 2026.05.12: 최초 생성 (eunchang)
- */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import Navbar from '@/shared/navbar/Navbar';
-import styles from '@/pages/landing/Landing.module.scss';
+import Footer from '@/shared/footer/Footer';
 import CustomButton from '@/shared/custombutton/CustomButton';
+import styles from '@/pages/landing/Landing.module.scss';
+import FeatureDetailCard from '@/pages/landing/components/FeatureDetailCard';
+import type { FeatureTabId } from '@/pages/landing/types';
+import { featureItems } from '@/pages/landing/constants/featureItems';
+import { FaApple, FaWindows } from 'react-icons/fa';
 
 /**
  *
  */
 const Landing: React.FC = () => {
+  const [activeFeatureId, setActiveFeatureId] = useState<FeatureTabId>('dashboard');
+
+  const activeFeature = useMemo(
+    () => featureItems.find(item => item.id === activeFeatureId) ?? featureItems[0],
+    [activeFeatureId],
+  );
+
   const sectionRefs = {
     hero: useRef<HTMLDivElement>(null),
     features: useRef<HTMLDivElement>(null),
   };
-
   const [visible, setVisible] = useState({
     hero: false,
     features: false,
@@ -50,7 +52,6 @@ const Landing: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
     Object.values(sectionRefs).forEach(ref => {
       if (ref.current) observer.observe(ref.current);
     });
@@ -61,7 +62,8 @@ const Landing: React.FC = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <div className={styles.mainContainer}>
+
+      <main className={styles.mainContainer}>
         <section
           ref={sectionRefs.hero}
           className={`${styles.hero} ${visible.hero ? styles['animate-stagger'] : ''}`}
@@ -70,12 +72,37 @@ const Landing: React.FC = () => {
             <h1>내 손 안에 작은 학습방</h1>
             <h2>문제 어때</h2>
             <div className={styles.heroButtons}>
-              <CustomButton text="다운로드" variant="primary" size="medium" />
-              <CustomButton text="도움말" variant="secondary" size="medium" />
+              <CustomButton
+                text="windows"
+                variant="primary"
+                icon={<FaWindows />}
+                size="medium"
+                onClick={() =>
+                  window.open(
+                    'https://github.com/HowAboutQuestion/Legacy-HowAboutQuestion/releases/latest/download/HowAboutQuestion.exe',
+                    '_blank',
+                  )
+                }
+              />
+              <CustomButton
+                text="macOS"
+                variant="primary"
+                icon={<FaApple />}
+                size="medium"
+                onClick={() =>
+                  window.open(
+                    'https://github.com/HowAboutQuestion/Legacy-HowAboutQuestion/releases/latest/download/HowAboutQuestion.dmg',
+                    '_blank',
+                  )
+                }
+              />
             </div>
           </div>
           <div className={styles.heroImage}>
-            <img src="src/assets/images/logo.png" alt="Hero" />
+            <img
+              src="https://d2ab13l3eziju4.cloudfront.net/frontend/logo.png"
+              alt="문제 어때 로고"
+            />
           </div>
         </section>
 
@@ -83,9 +110,33 @@ const Landing: React.FC = () => {
           ref={sectionRefs.features}
           className={`${styles.features} ${visible.features ? styles['animate-stagger'] : ''}`}
         >
-          <h3>학습을 위한 다양한 기능</h3>
+          <div className={styles.featuresCard}>
+            <h2 className={styles.featuresTitle}>학습을 위한 다양한 기능</h2>
+
+            <div className={styles.featuresTabs} role="tablist" aria-label="기능 소개 탭">
+              {featureItems.map(item => {
+                const isActive = item.id === activeFeature.id;
+
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    className={`${styles.featureTab} ${isActive ? styles.featureTabActive : ''}`}
+                    onClick={() => setActiveFeatureId(item.id)}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            <FeatureDetailCard feature={activeFeature} />
+          </div>
         </section>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,58 @@
-.footer{
-  background-color: $bg-footer;
-  position: fixed;
-  bottom: 0;
+@use '@/styles/index' as *;
+
+.footer {
   width: 100%;
-  height: 50px;
+  background-color: $bg-footer;
+  padding: 32px 16px;
+  color: $white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  text-align: center;
+}
+
+.title {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+}
+
+.description {
+  font-size: $font-sm;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.githubSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: $font-sm;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.divider {
+  opacity: 0.6;
+}
+
+.copyright {
+  font-size: $font-xs;
+  color: rgba(255, 255, 255, 0.7);
 }
