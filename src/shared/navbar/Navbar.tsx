@@ -11,11 +11,17 @@
 import React from 'react';
 import CustomButton from '@/shared/custombutton/CustomButton';
 import styles from '@/shared/navbar/Navbar.module.scss';
+import { useNavbar } from '@/hooks/useNavbar';
 
+/**
+ *
+ */
 const Navbar: React.FC = () => {
+  const { goHome, handleDownload } = useNavbar();
+
   return (
     <div className={styles.navbar}>
-      <div className={styles.logoBox}>
+      <div className={styles.logoBox} onClick={goHome} style={{ cursor: 'pointer' }}>
         <img className={styles.logoImage} src="src/assets/images/logo.png" />
         <span className={styles.logoTitle}>문제어때</span>
       </div>
@@ -27,7 +33,7 @@ const Navbar: React.FC = () => {
 
       <div className={styles.actions}>
         {/* <CustomButton text="로그인" variant="primary" size="medium" /> */}
-        <CustomButton text="다운로드" variant="primary" size="medium" />
+        <CustomButton text="다운로드" variant="primary" size="medium" onClick={handleDownload} />
       </div>
     </div>
   );

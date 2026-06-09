@@ -29,6 +29,10 @@ const Landing: React.FC = () => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
