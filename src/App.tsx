@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
 import Landing from '@/pages/landing/Landing';
-import Footer from '@/shared/footer/Footer';
+import CustomerService from '@/pages/customerservice/CustomerService';
 
 /**
  *
@@ -10,8 +10,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/support" element={<CustomerService />} />
       </Routes>
-      <Footer />
     </>
   );
 };

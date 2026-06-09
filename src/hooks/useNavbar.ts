@@ -8,6 +8,10 @@ export const useNavbar = () => {
     navigate('/');
   };
 
+  const goSupport = () => {
+    navigate('/support');
+  };
+
   const handleDownload = () => {
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -16,5 +20,5 @@ export const useNavbar = () => {
     }
   };
 
-  return { goHome, handleDownload };
+  return { goHome, goSupport, handleDownload };
 };
