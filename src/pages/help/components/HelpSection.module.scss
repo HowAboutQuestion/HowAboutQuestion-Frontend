@@ -1,0 +1,43 @@
+@use '@/styles' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid $gray-1;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.title {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+  color: $black;
+  line-height: 1.4;
+}
+
+.imageWrap {
+  width: 100%;
+  border-radius: $radius-4;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid $gray-1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.description {
+  font-size: $font-md;
+  font-weight: $font-regular;
+  color: $gray-6;
+  line-height: 1.75;
+}
