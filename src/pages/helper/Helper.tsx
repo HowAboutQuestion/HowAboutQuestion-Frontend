@@ -1,4 +1,6 @@
 /**
+ * @deprecated help 페이지로 대체 가능할 수 있을 것 같습니다.
+ * 일단 코드는 남겨놓고 최대한 활용할 수 있는 방안 모색해서 살려 보겠습니다.
  * @internal
  * @file Helper.tsx
  * @summary 도움말 페이지에 대한 컴포넌트입니다. <br> 초기 진입 시 애니메이션이 실행됩니다. <br> 플로팅 네비게이션 바로 스크롤을 이동할 수 있습니다.
@@ -6,11 +8,15 @@
  * @create 2025.08.18
  * @note
  * 2025.08.18: 최초 생성 (khaelilm1311)
+ * 2026.06.10: 페이지 Deprecated (cod0216)
  */
 import React, { useEffect, useRef, useState } from 'react';
 import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/helper/Helper.module.scss';
 
+/**
+ *
+ */
 const Helper: React.FC = () => {
   const sectionRefs = {
     book: useRef<HTMLDivElement | null>(null),
@@ -24,6 +30,9 @@ const Helper: React.FC = () => {
     analysis: false,
   });
 
+  /**
+   *
+   */
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -37,6 +46,9 @@ const Helper: React.FC = () => {
       threshold: 0.2,
     };
 
+    /**
+     *
+     */
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -51,6 +63,9 @@ const Helper: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
+    /**
+     *
+     */
     const initializeObserver = () => {
       Object.entries(sectionRefs).forEach(([key, ref]) => {
         if (ref.current) {
@@ -70,6 +85,7 @@ const Helper: React.FC = () => {
       clearTimeout(timer);
       observer.disconnect();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

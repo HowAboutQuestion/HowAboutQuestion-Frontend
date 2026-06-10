@@ -12,6 +12,9 @@ import Navbar from '@/shared/navbar/Navbar';
 import styles from '@/pages/welcome/Welcome.module.scss';
 import CustomButton from '@/shared/custombutton/CustomButton';
 
+/**
+ *
+ */
 const Welcome: React.FC = () => {
   const sectionRefs = {
     hero: useRef<HTMLDivElement>(null),
@@ -36,6 +39,9 @@ const Welcome: React.FC = () => {
       threshold: 0.2,
     };
 
+    /**
+     *
+     */
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -55,6 +61,7 @@ const Welcome: React.FC = () => {
     });
 
     return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

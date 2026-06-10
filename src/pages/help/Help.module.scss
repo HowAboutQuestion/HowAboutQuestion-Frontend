@@ -1,0 +1,67 @@
+@use '@/styles' as *;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-white;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.mainWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 860px;
+  padding: 60px 80px 100px;
+}
+
+.hero {
+  margin-bottom: 56px;
+}
+
+.heroTitle {
+  font-size: $font-4xl;
+  font-weight: $font-bold;
+  color: $black;
+  margin-bottom: 12px;
+}
+
+.heroDesc {
+  font-size: $font-lg;
+  color: $gray-5;
+}
+
+.categoryBlock {
+  margin-bottom: 72px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.categoryTitle {
+  font-size: $font-2xl;
+  font-weight: $font-bold;
+  color: $black;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid $blue-7;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
