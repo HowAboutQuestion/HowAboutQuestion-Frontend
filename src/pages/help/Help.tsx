@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/shared/navbar/Navbar';
 import Footer from '@/shared/footer/Footer';
 import HelpSidebar from '@/pages/help/components/HelpSidebar';
@@ -55,6 +56,13 @@ const Help: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>도움말 | 문제어때</title>
+        <meta
+          name="description"
+          content="문제어때의 주요 기능을 쉽게 알아보세요. 문제 관리, 문제 풀이, 대시보드 사용법을 안내합니다."
+        />
+      </Helmet>
       <Navbar />
       <div className={styles.body}>
         <HelpSidebar
