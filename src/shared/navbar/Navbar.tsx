@@ -17,7 +17,7 @@ import { useNavbar } from '@/hooks/useNavbar';
  *
  */
 const Navbar: React.FC = () => {
-  const { goHome, goSupport, handleDownload } = useNavbar();
+  const { goHome, goSupport, goIntro, handleDownload } = useNavbar();
 
   return (
     <div className={styles.navbar}>
@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <span className={styles.logoTitle}>문제어때</span>
       </div>
       <div className={styles.navLinks}>
-        <div>소개</div>
+        <div onClick={goIntro}>소개</div>
         <div>도움말</div>
         <div onClick={goSupport}>고객센터</div>
       </div>

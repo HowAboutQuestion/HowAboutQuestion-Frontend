@@ -20,5 +20,9 @@ export const useNavbar = () => {
     }
   };
 
-  return { goHome, goSupport, handleDownload };
+  const goIntro = () => {
+    navigate('/');
+  };
+
+  return { goHome, goSupport, goIntro, handleDownload };
 };
