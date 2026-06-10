@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '@/shared/navbar/Navbar';
-import Footer from '@/shared/footer/Footer';
 import styles from '@/pages/customerservice/CustomerService.module.scss';
 import { FaDiscord } from 'react-icons/fa';
 
@@ -34,7 +33,6 @@ const CustomerService: React.FC = () => {
           </button>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
