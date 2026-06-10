@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 
         <div className={style.githubSection}>
           <a
-            href="https://github.com/khaelim1311"
+            href="https://github.com/haerim-kweon"
             target="_blank"
             rel="noopener noreferrer"
             className={style.githubLink}
