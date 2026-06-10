@@ -13,6 +13,7 @@ import styles from '@/pages/help/Help.module.scss';
 const Help: React.FC = () => {
   const firstStepId = helpCategories[0].steps[0].id;
   const [activeStepId, setActiveStepId] = useState(firstStepId);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
@@ -69,6 +70,8 @@ const Help: React.FC = () => {
           categories={helpCategories}
           activeStepId={activeStepId}
           onStepClick={handleStepClick}
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
         />
         <div className={styles.mainWrapper}>
           <main className={styles.main}>
@@ -96,6 +99,15 @@ const Help: React.FC = () => {
           </main>
         </div>
       </div>
+
+      <button
+        className={styles.floatingBtn}
+        onClick={() => setIsSidebarOpen(prev => !prev)}
+        aria-label="목차 열기"
+      >
+        <img src="src/assets/images/logo.png" alt="목차" />
+      </button>
+
       <Footer />
     </div>
   );
