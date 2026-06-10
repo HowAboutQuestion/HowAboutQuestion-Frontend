@@ -324,6 +324,10 @@
 
   .hero {
     grid-template-columns: 1fr;
+
+    .heroText {
+      max-width: 100%;
+    }
   }
 
   .featuresCard {
@@ -340,15 +344,60 @@
     gap: 72px;
   }
 
+  .hero {
+    text-align: center;
+
+    .heroText {
+      max-width: 100%;
+
+      h2 {
+        font-size: $font-3xl;
+      }
+
+      .heroButtons {
+        justify-content: center;
+
+        > * {
+          font-size: $font-md;
+          padding: 8px 16px;
+        }
+      }
+    }
+
+    .heroImage {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+
   .featuresCard {
     padding: 36px 20px 48px;
+  }
+
+  .featuresTitle {
+    font-size: $font-2xl;
   }
 
   .featuresTabs {
     gap: 12px;
   }
 
-  .featureDetailCard,
+  .featureDetailCard {
+    grid-template-columns: 1fr;
+
+    .featureDetailContent {
+      order: 2;
+    }
+
+    .featureDetailImage {
+      order: 1;
+    }
+  }
+
+  .featureDetailTitle {
+    font-size: $font-xl;
+  }
+
   .previewStats,
   .previewChartArea {
     grid-template-columns: 1fr;
