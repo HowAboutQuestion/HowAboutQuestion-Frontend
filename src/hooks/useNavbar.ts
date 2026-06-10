@@ -1,17 +1,36 @@
 import { useNavigate, useLocation } from 'react-router';
 
+/**
+ *
+ */
 export const useNavbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  /**
+   *
+   */
   const goHome = () => {
     navigate('/');
   };
 
+  /**
+   *
+   */
   const goSupport = () => {
     navigate('/support');
   };
 
+  /**
+   *
+   */
+  const goHelp = () => {
+    navigate('/help');
+  };
+
+  /**
+   *
+   */
   const handleDownload = () => {
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,9 +39,12 @@ export const useNavbar = () => {
     }
   };
 
+  /**
+   *
+   */
   const goIntro = () => {
     navigate('/');
   };
 
-  return { goHome, goSupport, goIntro, handleDownload };
+  return { goHome, goSupport, goHelp, goIntro, handleDownload };
 };
