@@ -73,7 +73,7 @@ const Welcome: React.FC = () => {
           className={`${styles.hero} ${visible.hero ? styles['animate-stagger'] : ''}`}
         >
           <div className={styles.heroText}>
-            <h1>내 손 안에 작은 학습방</h1>
+            <h1>내 안의 작은 학습방</h1>
             <h2>문제 어때</h2>
             <div className={styles.heroButtons}>
               <CustomButton text="문제풀기" variant="primary" size="medium" />
