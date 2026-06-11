@@ -22,17 +22,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
-          cache: yarn
+          cache: npm
 
       - name: Dobby Installs Dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Dobby Prepares Environment Variables
         run: |
           echo "VITE_TEST_DATA=${{ secrets.VITE_TEST_DATA }}" >> $GITHUB_ENV
 
       - name: Dobby Checks the Frontend Build
-        run: yarn build
+        run: npm run build
 
   deploy:
     name: Dobby Deploys to S3
@@ -49,17 +49,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.12.0
-          cache: yarn
+          cache: npm
 
       - name: Dobby Installs Dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Dobby Prepares Environment Variables
         run: |
           echo "VITE_TEST_DATA=${{ secrets.VITE_TEST_DATA }}" >> $GITHUB_ENV
 
       - name: Dobby Packs the Frontend
-        run: yarn build
+        run: npm run build
 
       - name: Dobby Sends Files to S3
         uses: jakejarvis/s3-sync-action@master
