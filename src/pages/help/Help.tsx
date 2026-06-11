@@ -51,7 +51,10 @@ const Help: React.FC = () => {
   const handleStepClick = (_categoryId: string, stepId: string) => {
     const el = sectionRefs.current.get(stepId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const NAVBAR_HEIGHT = 60;
+      const PADDING = 24;
+      const top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT - PADDING;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
