@@ -53,11 +53,14 @@ const Navbar: React.FC = () => {
       </button>
 
       {isMenuOpen && (
-        <div className={styles.mobileMenu}>
-          <div onClick={() => handleNavClick(goIntro)}>소개</div>
-          <div onClick={() => handleNavClick(goHelp)}>도움말</div>
-          <div onClick={() => handleNavClick(goSupport)}>고객센터</div>
-        </div>
+        <>
+          <div className={styles.menuOverlay} onClick={() => setIsMenuOpen(false)} />
+          <div className={styles.mobileMenu}>
+            <div onClick={() => handleNavClick(goIntro)}>소개</div>
+            <div onClick={() => handleNavClick(goHelp)}>도움말</div>
+            <div onClick={() => handleNavClick(goSupport)}>고객센터</div>
+          </div>
+        </>
       )}
     </div>
   );

@@ -91,6 +91,10 @@
     display: none;
   }
 
+  .menuOverlay {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     .logoTitle {
       display: none;
@@ -109,6 +113,14 @@
       align-items: center;
     }
 
+    .menuOverlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      top: 60px;
+      z-index: 98;
+    }
+
     .mobileMenu {
       display: flex;
       flex-direction: column;
@@ -116,6 +128,7 @@
       top: 60px;
       left: 0;
       right: 0;
+      z-index: 99;
       background-color: $bg-white;
       border-bottom: 1px solid $gray-1;
       padding: 8px 0;
