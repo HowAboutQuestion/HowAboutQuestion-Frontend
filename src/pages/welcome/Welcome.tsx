@@ -81,7 +81,7 @@ const Welcome: React.FC = () => {
             </div>
           </div>
           <div className={styles.heroImage}>
-            <img src="src/assets/images/logo.png" alt="Hero" />
+            <img src="src/assets/images/logo.webp" alt="Hero" />
           </div>
         </section>
 

@@ -105,7 +105,7 @@ const Help: React.FC = () => {
         onClick={() => setIsSidebarOpen(prev => !prev)}
         aria-label="목차 열기"
       >
-        <img src="src/assets/images/logo.png" alt="목차" />
+        <img src="src/assets/images/logo.webp" alt="목차" />
       </button>
 
       <Footer />

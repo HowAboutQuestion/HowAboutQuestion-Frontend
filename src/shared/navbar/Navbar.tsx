@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.logoBox} onClick={goHome} style={{ cursor: 'pointer' }}>
-        <img className={styles.logoImage} src="src/assets/images/logo.png" />
+        <img className={styles.logoImage} src="src/assets/images/logo.webp" />
         <span className={styles.logoTitle}>문제어때</span>
       </div>
 
