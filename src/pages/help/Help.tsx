@@ -6,6 +6,7 @@ import HelpSidebar from '@/pages/help/components/HelpSidebar';
 import HelpSection from '@/pages/help/components/HelpSection';
 import { helpCategories } from '@/pages/help/constants';
 import styles from '@/pages/help/Help.module.scss';
+import logoImg from '@/assets/images/logo.webp';
 
 /**
  *
@@ -108,7 +109,7 @@ const Help: React.FC = () => {
         onClick={() => setIsSidebarOpen(prev => !prev)}
         aria-label="목차 열기"
       >
-        <img src="src/assets/images/logo.webp" alt="목차" />
+        <img src={logoImg} alt="목차" />
       </button>
 
       <Footer />

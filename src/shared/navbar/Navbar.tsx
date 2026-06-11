@@ -14,6 +14,7 @@ import { RiMenuLine, RiCloseLine } from 'react-icons/ri';
 import CustomButton from '@/shared/custombutton/CustomButton';
 import styles from '@/shared/navbar/Navbar.module.scss';
 import { useNavbar } from '@/hooks/useNavbar';
+import logoImg from '@/assets/images/logo.webp';
 
 /**
  *
@@ -33,7 +34,7 @@ const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.logoBox} onClick={goHome} style={{ cursor: 'pointer' }}>
-        <img className={styles.logoImage} src="src/assets/images/logo.webp" />
+        <img className={styles.logoImage} src={logoImg} />
         <span className={styles.logoTitle}>문제어때</span>
       </div>
 
