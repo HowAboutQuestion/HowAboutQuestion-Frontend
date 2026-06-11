@@ -13,6 +13,7 @@ import styles from '@/pages/help/Help.module.scss';
 const Help: React.FC = () => {
   const firstStepId = helpCategories[0].steps[0].id;
   const [activeStepId, setActiveStepId] = useState(firstStepId);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
@@ -50,7 +51,10 @@ const Help: React.FC = () => {
   const handleStepClick = (_categoryId: string, stepId: string) => {
     const el = sectionRefs.current.get(stepId);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const NAVBAR_HEIGHT = 60;
+      const PADDING = 24;
+      const top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT - PADDING;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
@@ -69,6 +73,8 @@ const Help: React.FC = () => {
           categories={helpCategories}
           activeStepId={activeStepId}
           onStepClick={handleStepClick}
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
         />
         <div className={styles.mainWrapper}>
           <main className={styles.main}>
@@ -96,6 +102,15 @@ const Help: React.FC = () => {
           </main>
         </div>
       </div>
+
+      <button
+        className={styles.floatingBtn}
+        onClick={() => setIsSidebarOpen(prev => !prev)}
+        aria-label="목차 열기"
+      >
+        <img src="src/assets/images/logo.webp" alt="목차" />
+      </button>
+
       <Footer />
     </div>
   );

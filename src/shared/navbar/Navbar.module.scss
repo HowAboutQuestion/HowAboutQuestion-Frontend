@@ -27,6 +27,7 @@
     font-weight: $font-bold;
     color: $black;
   }
+
   .navLinks {
     display: flex;
     gap: 24px;
@@ -73,6 +74,77 @@
       &:hover {
         background-color: $blue-2;
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $black;
+    padding: 4px;
+    line-height: 0;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .menuOverlay {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .logoTitle {
+      display: none;
+    }
+
+    .navLinks {
+      display: none;
+    }
+
+    .actions {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      align-items: center;
+    }
+
+    .menuOverlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      top: 60px;
+      z-index: 98;
+    }
+
+    .mobileMenu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background-color: $bg-white;
+      border-bottom: 1px solid $gray-1;
+      padding: 8px 0;
+
+      div {
+        font-size: $font-md;
+        font-weight: $font-medium;
+        color: $black;
+        cursor: pointer;
+        padding: 14px 24px;
+
+        &:hover {
+          background-color: $gray-1;
+        }
+      }
+
     }
   }
 }

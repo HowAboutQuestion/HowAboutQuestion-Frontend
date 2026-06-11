@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styles from '@/pages/help/components/HelpSection.module.scss';
 import type { HelpStep } from '@/pages/help/types';
 
