@@ -9,21 +9,21 @@ export const management: HelpCategory = {
       title: '객관식 & 주관식 문제 만들기',
       description:
         '화면 우측 상단의 문제 추가 버튼을 누르면 문제 작성 모달이 열립니다. 객관식은 선택지를 최대 4개까지 입력하고 정답에 해당하는 선택지를 지정하는 방식으로, 시험 대비 학습에 가장 많이 사용됩니다. 주관식은 정답 텍스트를 직접 입력하는 방식으로 용어의 정의를 외우거나 코드 키워드, 단어 암기에 적합합니다. 두 유형 모두 태그, 설명, 이미지를 추가할 수 있습니다. 태그는 쉼표로 구분해 여러 개를 한 번에 입력할 수 있고, 설명에는 오답 시 학습자가 이해할 수 있도록 단순히 정답을 반복하는 것보다 이유나 배경을 적어두면 더 도움이 됩니다.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/frontend/문제생성.png',
+      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/insert.webp',
     },
     {
       id: 'management-compact',
       title: '빠른 문제 작성 — 콤팩트 모드 & 확장형 모드',
       description:
         '문제를 한 번에 여러 개 만들어야 할 때는 콤팩트 모드를 활용하면 훨씬 빠릅니다. 모달은 기본적으로 콤팩트 모드로 열리며, 화면을 많이 차지하지 않는 작은 창에서 핵심 입력만 빠르게 처리할 수 있습니다. 설명을 길게 쓰거나 이미지를 첨부할 때처럼 모달이 좁게 느껴진다면 모달 상단의 확장 버튼을 눌러 전체 화면 크기로 넓혀서 작업하세요.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/frontend/expand.webp',
+      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/expand.webp',
     },
     {
       id: 'management-image',
       title: '이미지 업로드',
       description:
         '그림이나 도표가 있어야 문제의 의미가 완전해지는 경우가 있습니다. 회로도 문제, 지도 문제, 코드 스크린샷처럼 이미지가 문제 자체인 경우에 유용합니다. 이미지 영역을 클릭하면 파일 탐색기가 열려 파일을 선택할 수 있고, 이미지 파일을 모달 위로 직접 드래그 앤 드롭해도 됩니다. 첨부된 이미지는 문제 풀이 화면에서도 그대로 표시되며, 이미지를 클릭하면 확대해서 볼 수 있어 세밀한 그림이나 긴 코드 스크린샷도 문제로 만들기 어렵지 않습니다.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/frontend/image.webp',
+      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/image.webp',
     },
     {
       id: 'management-edit',
@@ -31,8 +31,8 @@ export const management: HelpCategory = {
       description:
         '만들어둔 문제의 내용을 바꾸고 싶다면 목록에서 해당 문제를 클릭하세요. 수정 모달에는 기존에 입력했던 내용이 모두 자동으로 채워져 있어, 바꾸고 싶은 부분만 수정하고 저장하면 됩니다. 제목, 선택지, 정답, 태그, 이미지, 설명 모두 수정할 수 있으며 유형을 객관식에서 주관식으로 변경하는 것도 가능합니다. 삭제할 때는 문제 왼쪽의 체크박스를 선택한 뒤 삭제 버튼을 누릅니다. 여러 문제를 한꺼번에 선택해 일괄 삭제할 수 있고, 목록 최상단의 전체 선택 체크박스를 누르면 현재 보이는 문제를 한 번에 선택할 수 있습니다. 삭제 전에 확인 메시지가 나타나므로 실수로 눌러도 바로 취소할 수 있습니다.',
       imageUrl: [
-        'https://d32dzhpi5hq0mf.cloudfront.net/frontend/modify.webp',
-        'https://d32dzhpi5hq0mf.cloudfront.net/frontend/delete.webp',
+        'https://d32dzhpi5hq0mf.cloudfront.net/modify.webp',
+        'https://d32dzhpi5hq0mf.cloudfront.net/delete.webp',
       ],
     },
     {
@@ -40,14 +40,14 @@ export const management: HelpCategory = {
       title: '태그로 문제 분류하기',
       description:
         '문제가 많아질수록 태그의 중요성이 커집니다. 처음부터 태그를 잘 정해두면 나중에 원하는 문제를 찾거나 특정 주제만 골라서 풀 때 매우 편리합니다. 화면 왼쪽의 태그 사이드바에서 태그를 클릭하면 해당 태그가 붙은 문제만 목록에 표시됩니다. 여러 태그를 동시에 선택하면 선택한 태그 중 하나라도 포함된 문제가 모두 표시되고, 사이드바가 화면 공간을 차지한다면 접기 버튼으로 숨길 수 있습니다. 태그는 과목이나 챕터 단위, 난이도, 문제 출처, 개념 키워드 등 자신만의 체계로 구성해두면 좋습니다. 태그는 문제 풀이 화면에서 풀 문제를 고르는 기준이 되기도 합니다.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/frontend/tagselect.webp',
+      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/tagselect.webp',
     },
     {
       id: 'management-export',
       title: '문제 가져오기 & 내보내기',
       description:
         '내가 만든 문제를 ZIP 파일로 내보내 다른 기기로 옮기거나 스터디원과 공유할 수 있습니다. 내보낼 때는 원하는 문제의 체크박스를 선택한 뒤 내보내기 버튼을 누르면 ZIP 파일이 다운로드됩니다. 아무것도 선택하지 않으면 현재 목록의 전체 문제가 대상이 됩니다. 가져올 때는 가져오기 버튼을 누른 뒤 이전에 내보낸 ZIP 파일을 선택하면 됩니다. 가져오기를 하면 기존 문제가 지워지는 것이 아니라 기존 목록에 추가되므로, 스터디원이 만든 문제를 받아서 내 문제와 함께 쓰거나 백업 용도로 보관하는 데도 활용할 수 있습니다.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/frontend/export.webp',
+      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/export.webp',
     },
   ],
 };
