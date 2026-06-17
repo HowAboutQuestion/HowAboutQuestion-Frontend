@@ -7,12 +7,20 @@ interface Props {
 }
 
 const HelpSection = forwardRef<HTMLElement, Props>(({ step }, ref) => {
+  const imageUrls = Array.isArray(step.imageUrl)
+    ? step.imageUrl
+    : step.imageUrl
+      ? [step.imageUrl]
+      : [];
+
   return (
     <section id={step.id} className={styles.section} ref={ref}>
       <h3 className={styles.title}>{step.title}</h3>
-      {step.imageUrl && (
+      {imageUrls.length > 0 && (
         <div className={styles.imageWrap}>
-          <img src={step.imageUrl} alt={step.title} className={styles.image} />
+          {imageUrls.map((url, idx) => (
+            <img key={idx} src={url} alt={`${step.title} ${idx + 1}`} className={styles.image} />
+          ))}
         </div>
       )}
       <p className={styles.description}>{step.description}</p>
