@@ -9,7 +9,10 @@ export const management: HelpCategory = {
       title: '객관식 & 주관식 문제 만들기',
       description:
         '화면 우측 상단의 문제 추가 버튼을 누르면 문제 작성 모달이 열립니다. 객관식은 선택지를 최대 4개까지 입력하고 정답에 해당하는 선택지를 지정하는 방식으로, 시험 대비 학습에 가장 많이 사용됩니다. 주관식은 정답 텍스트를 직접 입력하는 방식으로 용어의 정의를 외우거나 코드 키워드, 단어 암기에 적합합니다. 두 유형 모두 태그, 설명, 이미지를 추가할 수 있습니다. 태그는 쉼표로 구분해 여러 개를 한 번에 입력할 수 있고, 설명에는 오답 시 학습자가 이해할 수 있도록 단순히 정답을 반복하는 것보다 이유나 배경을 적어두면 더 도움이 됩니다.',
-      imageUrl: 'https://d32dzhpi5hq0mf.cloudfront.net/insert.webp',
+      imageUrl: [
+        'https://d32dzhpi5hq0mf.cloudfront.net/selected.webp',
+        'https://d32dzhpi5hq0mf.cloudfront.net/writed.webp',
+      ],
     },
     {
       id: 'management-compact',
