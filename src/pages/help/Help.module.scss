@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background-color: $bg-white;
+  background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
 }
@@ -34,13 +34,13 @@
 .heroTitle {
   font-size: $font-4xl;
   font-weight: $font-bold;
-  color: $black;
+  color: var(--color-text);
   margin-bottom: 12px;
 }
 
 .heroDesc {
   font-size: $font-lg;
-  color: $gray-5;
+  color: var(--color-text-secondary);
 }
 
 .categoryBlock {
@@ -54,7 +54,7 @@
 .categoryTitle {
   font-size: $font-2xl;
   font-weight: $font-bold;
-  color: $black;
+  color: var(--color-text);
   margin-bottom: 32px;
   padding-bottom: 16px;
   border-bottom: 2px solid $blue-7;
@@ -77,7 +77,7 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  background-color: $bg-white;
+  background-color: var(--color-bg);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   padding: 0;
   overflow: hidden;
