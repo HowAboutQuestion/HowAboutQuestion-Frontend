@@ -2,6 +2,24 @@
 @use "fonts" as *;
 @use "radius" as *;
 
+:root {
+  --color-bg: #{$bg-white};
+  --color-text: #{$black};
+  --color-text-secondary: #{$gray-5};
+  --color-text-muted: #{$gray-6};
+  --color-border: #{$gray-1};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121218;
+    --color-text: #f0f0f5;
+    --color-text-secondary: #{$gray-4};
+    --color-text-muted: #{$gray-3};
+    --color-border: #2c2c3a;
+  }
+}
+
 @font-face {
   font-family: 'Pretendard';
   src: url('../assets/fonts/PretendardVariable.ttf') format('truetype');
@@ -16,6 +34,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Pretendard', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
  
 a, a:link, a:visited{
