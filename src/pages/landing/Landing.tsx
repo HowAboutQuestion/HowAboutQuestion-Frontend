@@ -84,7 +84,7 @@ const Landing: React.FC = () => {
                 size="medium"
                 onClick={() =>
                   window.open(
-                    'https://github.com/HowAboutQuestion/Legacy-HowAboutQuestion/releases/latest/download/HowAboutQuestion.exe',
+                    'https://github.com/HowAboutQuestion/Legacy-HowAboutQuestion/releases/latest/download/HowAboutQuestion_Install.exe',
                     '_blank',
                   )
                 }
